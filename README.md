@@ -1,7 +1,4 @@
 # Support Me - Buy Me a Coffee
-
-![Support Me](https://i.imgur.com/EXAMPLE.png)
-
 This is a simple web page where you can support my work by buying me a coffee. You can choose from predefined amounts or enter a custom amount.
 
 ## How to Use
@@ -15,13 +12,7 @@ This is a simple web page where you can support my work by buying me a coffee. Y
 - ₹50
 - ₹100
 - ₹200
-
-## UPI Payment Providers
-- ![UPI Provider 1](https://iili.io/HZsWZrl.png)
-- ![UPI Provider 2](https://iili.io/HZsWQ14.png)
-- ![UPI Provider 3](https://iili.io/HZsWLBf.png)
-- ![UPI Provider 4](https://iili.io/HZsW6In.png)
-
+\
 ## Attribution
 This page was coded by [Tamilselvan](https://tamilselvan6.github.io/profolio/).
 
