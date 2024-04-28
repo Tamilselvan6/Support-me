@@ -1,116 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support me</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
-<style>
-  body {
-    align-items: center;
-    background-color: hsl(212, 45%, 89%);
-    display: flex;
-    font-family: "Outfit", serif;
-    justify-content: center;
-    height: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    width: auto;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Me</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+    <style>
+        body {
+            align-items: center;
+            background-color: hsl(212, 45%, 89%);
+            display: flex;
+            font-family: "Outfit", serif;
+            justify-content: center;
+            height: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+            width: auto;
+        }
 
-  .card {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px hsl(220, 15%, 55%);
-    padding: 4%;
-    top: 25%;
-    text-align: center;
-    width: 325px;
-  }
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px hsl(220, 15%, 55%);
+            padding: 4%;
+            top: 25%;
+            text-align: center;
+            width: 325px;
+        }
 
-  #qr {
-    border-radius: 15px;
-    height: 425px;
-    width: 325px;
-  }
+        #qr {
+            margin: 15px auto;
+            display: block;
+        }
 
-  .upi {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     height: 100%;
-  }
 
-  .upi > img {
-    padding: 5px;
-  }
+        .upi {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            margin-bottom: 15px;
+        }
 
-  h1 {
-    color: hsl(218, 44%, 22%);
-    font-weight: 700;
-  }
+        .upi>img {
+            padding: 5px;
+            cursor: pointer;
+        }
 
-  p {
-    color: hsl(220, 15%, 55%);
-    font-size: 15px;
-    font-weight: 400;
-    padding: 15px;
-  }
- 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+        h1 {
+            color: hsl(218, 44%, 22%);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
 
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-    text-decoration: none;
-  }
-  @media only screen and (max-width: 768px) {
-  body {
-    justify-content: flex-start;
-  }
+        button {
+            background-color: hsl(218, 44%, 22%);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-  .card {
-    width: 90%;
-  }
+        button:hover {
+            background-color: hsl(218, 44%, 32%);
+        }
 
-  #qr {
-    height: auto;
-    width: 90%;
-  }
+        p {
+            color: hsl(220, 15%, 55%);
+            font-size: 15px;
+            font-weight: 400;
+            padding: 15px;
+        }
 
- 
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+            text-decoration: none;
+        }
+
+        .coffee-amounts {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .coffee-amount {
+            border: solid hsl(218, 44%, 22%) 1px;
+            border-radius: 5px;
+            color: hsl(218, 44%, 22%);
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .coffee-amount:hover {
+            transform: translateY(-3px);
+        }
+
+        #paymentLink {
+            display: inline-block;
+            /* Display as a block-level element */
+            background-color: hsl(218, 44%, 22%);
+            /* Background color */
+            color: white;
+            /* Text color */
+            padding: 10px 20px;
+            /* Padding */
+            border-radius: 5px;
+            /* Rounded corners */
+            text-decoration: none;
+            /* Remove underline */
+            transition: background-color 0.3s ease;
+            /* Smooth transition for background color change */
+        }
+
+        #paymentLink:hover {
+            background-color: hsl(218, 44%, 32%);
+            /* Darker background color on hover */
+        }
+
+        #custom-amount {
+            width: 100%;
+            /* Set width to 100% */
+            padding: 10px;
+            /* Padding around the input */
+            margin-bottom: 15px;
+            /* Spacing at the bottom */
+            box-sizing: border-box;
+            /* Include padding and border in the element's total width and height */
+            border: 2px solid hsl(0, 0%, 62%);
+            /* Border color */
+            border-radius: 5px;
+            /* Rounded corners */
+            font-size: 16px;
+            /* Font size */
+        }
+
+        #custom-amount::placeholder {
+            color: hsl(220, 15%, 55%);
+            /* Placeholder text color */
+        }
+
+        @media only screen and (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+    .coffee-amount{
+        padding: 10px;
+    }
+    
+    .upi > img {
+        height: 30px;
+    }
 }
 
-  
-</style>
+    </style>
 </head>
+
 <body>
-<main>
-    <section class="card">
-        <img src="https://raw.githubusercontent.com/Tamilselvan6/profolio/main/image/gpay.jpg" id="qr" alt="image of qr code">
-        <h1>Buy Me a Coffee</h1>
-        <div class="upi">
-          <img src="https://iili.io/HZsWZrl.png" style="height: 40px;">
-          <img src="https://iili.io/HZsWQ14.png" style="height: 20px;">
-          <img src="https://iili.io/HZsWLBf.png" style="height: 20px;">
-          <img src="https://iili.io/HZsW6In.png" style="height: 20px;">
-        </div>
-        <div class="container">
-          <p>Scan the QR code to support my work</p>
-        </div>
-        <div class="attribution">
-          Coded by <a href="https://tamilselvan6.github.io/profolio/">Tamilselvan</a>
-        </div>
-      </section>
-      
-</main>
+    <main>
+        <section class="card">
+            <h1>Buy Me a Coffee</h1>
+            <div class="container">
+                <input type="number" id="custom-amount" placeholder="Enter amount in ₹">
+                <div class="coffee-amounts">
+                    <div class="coffee-amount" data-amount="20">₹20</div>
+                    <div class="coffee-amount" data-amount="50">₹50</div>
+                    <div class="coffee-amount" data-amount="100">₹100</div>
+                    <div class="coffee-amount" data-amount="200">₹200</div>
+                </div>
+                <div class="upi">
+                    <img src="https://iili.io/HZsWZrl.png" style="height: 40px;">
+                    <img src="https://iili.io/HZsWQ14.png" style="height: 20px;">
+                    <img src="https://iili.io/HZsWLBf.png" style="height: 20px;">
+                    <img src="https://iili.io/HZsW6In.png" style="height: 20px;">
+
+                </div>
+                <img id="qr">
+            </div><a id="paymentLink" href="#" style="display:none;">Click here for Support</a>
+            <div class="container">
+                <p>Scan the QR code to support my work</p>
+
+                <div class="attribution">
+                    Coded by <a href="https://tamilselvan6.github.io/profolio/">Tamilselvan</a>
+                </div>
+        </section>
+    </main>
+
+    <script>
+        function generateQR(provider) {
+            var amount = document.getElementById("custom-amount").value;
+            var paymentNumber = "21cse058tamilselvan";
+            var upiLink = "upi://pay?pa=" + paymentNumber + "@okaxis&am=" + amount;
+            var qrCode = "https://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(upiLink) + "&size=200x200";
+            document.getElementById("qr").src = qrCode;
+            var paymentLink = document.getElementById("paymentLink");
+            paymentLink.href = upiLink;
+            paymentLink.style.display = "block";
+        }
+
+        const coffeeAmounts = document.querySelectorAll('.coffee-amount');
+        const customAmountInput = document.getElementById('custom-amount');
+
+        coffeeAmounts.forEach(amount => {
+            amount.addEventListener('click', () => {
+                customAmountInput.value = amount.getAttribute('data-amount');
+                generateQR(); // Generate QR when amount is clicked
+            });
+        });
+
+        // Generate QR when custom amount input loses focus
+        customAmountInput.addEventListener('blur', () => {
+            generateQR();
+        });
+    </script>
+
 </body>
+
 </html>
